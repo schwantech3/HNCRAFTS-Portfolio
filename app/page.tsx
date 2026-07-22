@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 const ArrowUpRight = ({ className = "" }: { className?: string }) => (
   <span className={className} aria-hidden="true">↗</span>
 );
@@ -94,7 +96,14 @@ export default function Home() {
         </div>
 
         <div className="hero-visual" aria-label="Developer working on software and IoT projects">
-          <img src="/shakil-developer.png" alt="Stylized illustration of a developer coding with software and IoT elements" />
+          <Image
+            src="/shakil-developer.png"
+            alt="Stylized illustration of a developer coding with software and IoT elements"
+            width={972}
+            height={1616}
+            sizes="(max-width: 980px) 90vw, 42vw"
+            priority
+          />
           <span className="floating-code"><CodeIcon /></span>
           <span className="floating-label">BUILDING<br />WITH PURPOSE</span>
           <div className="visual-caption">
